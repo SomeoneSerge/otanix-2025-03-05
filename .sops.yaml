@@ -5,6 +5,7 @@ keys:
   - &lajp1 age1x23spzhzzlcrwer5s0zytzp2gqzwkwy0y47hzf4kpwdehggkr4tsqcj52q
   - &lajp2 age1sfg2q77c39t4r9c84lpznv9kcqz6muhcffrgchn9zevcm0e89sksphe03p
   - &yggiElse age1rqd0vqju7ex0z7fh0lzxjkrjcrgd9hgq0ccs3uxzmj9cjprs750qjfenwl
+  - &joonas age16ylkwjrnkwzxpj52x5xsrsqkzkk3le2tkww9fyhz08w9gn508vqq6e9pyj
   - &joonas1 age1xjyhwevqejxywc7a0ryeercu2c3j5vhv9skajrerst6vh6k894tq83etme
   - &joonas2 age1cvf3elykct77hmdcf4rrchretrdrjuxq9tpj0ht2v2tuft7naq2sq5clrd
 creation_rules:
@@ -15,5 +16,6 @@ creation_rules:
         - *else
         - *lajp1
         - *lajp2
+        - *joonas
         - *joonas1
         - *joonas2

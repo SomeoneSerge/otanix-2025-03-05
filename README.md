@@ -23,4 +23,13 @@ NixOS
 agenix, sops-nix
 ---
 
-Generate secrets in advance, and encrypt them
+Generate secrets in advance, encrypt them
+
+
+sops-nix demo
+---
+
+- `nvim .sops.yaml` (configure recipients)
+- `sops vms/yggi/secrets.yaml` (add secret)
+- `sops updatekeys vms/yggi/secrets.yaml` (re-encrypt for new recipients)
+- 
