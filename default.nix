@@ -107,6 +107,20 @@ let
 
     ) (enumerate vmsConfigs)
   );
+  tlFontsConf = pkgs.makeFontsConf {
+    fontDirectories = [
+      "${texlive}/share/texmf/"
+    ];
+  };
+  texlive = pkgs.texliveSmall.withPackages (ps: [
+    ps.beamer
+    ps.biber
+    ps.biblatex
+    ps.cm-unicode
+    ps.fontawesome5
+    ps.latexmk
+    ps.minted
+  ]);
 in
 {
   inherit vms;
@@ -115,4 +129,30 @@ in
     shift
     ${lib.getExe pkgs.curl} "https://github.com/$name.keys" 2>/dev/null | ${lib.getExe pkgs.ssh-to-age}
   '';
+  slides = pkgs.stdenvNoCC.mkDerivation {
+    pname = "otasecrets";
+    version = "0.0.0";
+    src = lib.fileset.toSource {
+      root = ./.;
+      fileset = lib.fileset.unions [
+        ./README.md
+      ];
+    };
+    nativeBuildInputs = [
+      pkgs.pandoc
+      texlive
+    ];
+    FONTCONFIG_FILE = tlFontsConf;
+    buildPhase = ''
+      runHook preBuild
+      pandoc -t beamer README.md -o otasecrets.pdf
+      runHook postBuild
+    '';
+    installPhase = ''
+      runHook preInstall
+      mkdir "$out"
+      cp otasecrets.pdf "$out"/
+      runHook postInstall
+    '';
+  };
 }
