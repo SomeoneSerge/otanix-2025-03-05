@@ -42,6 +42,9 @@
     PrivateKey = config.sops.placeholder."yggi/yggdrasil/PrivateKey";
   };
 
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 12345 ];
+
   systemd.services.yggdrasil-persistent-keys-pre = {
     serviceConfig.User = "root";
     serviceConfig.Type = "oneshot";
@@ -66,4 +69,5 @@
     extraGroups = [ "wheel" ];
     password = "otanix";
   };
+  environment.systemPackages = [ pkgs.netcat pkgs.python3 ];
 }
