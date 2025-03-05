@@ -87,11 +87,12 @@ let
                       tag = "ro-store";
                       proto = "9p";
                     }
+                  ];
+                  microvm.volumes = [
                     {
-                      source = "/tmp/microvm-${value.name}/etc";
+                      image = "etc-${value.name}.img";
                       mountPoint = "/etc";
-                      tag = "rw-etc";
-                      proto = "9p";
+                      size = 256;
                     }
                   ];
                 }
