@@ -1,0 +1,35 @@
+{
+  "pins": {
+    "microvm.nix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "astro",
+        "repo": "microvm.nix"
+      },
+      "branch": "main",
+      "revision": "d3a9b7504d420a1ffd7c83c1bb8fe57deaf939d2",
+      "url": "https://github.com/astro/microvm.nix/archive/d3a9b7504d420a1ffd7c83c1bb8fe57deaf939d2.tar.gz",
+      "hash": "04i9nr2jm4ingr51bfnims1dql6kdynm5fa86gccclcgvnwyvnvc"
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.05pre762233.02032da4af07/nixexprs.tar.xz",
+      "hash": "0wx6vnq02n9c5x1df3dpzi1xk8aj5vvzzjhbb9dq04871hqs5wzs"
+    },
+    "sops-nix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Mic92",
+        "repo": "sops-nix"
+      },
+      "branch": "master",
+      "revision": "3f2412536eeece783f0d0ad3861417f347219f4d",
+      "url": "https://github.com/Mic92/sops-nix/archive/3f2412536eeece783f0d0ad3861417f347219f4d.tar.gz",
+      "hash": "05rr1x1nrvy80ma8mryvlc8q2a22mwlp1yhacayymsgkj94ycmzn"
+    }
+  },
+  "version": 3
+}

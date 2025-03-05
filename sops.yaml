@@ -1,0 +1,15 @@
+keys:
+  # Obtained via `ssh-keyscan $host | ssh-to-age`
+  # ...or `curl https://github.com/"$user".keys | ssh-to-age`
+  - &else age162pzsftfmvm0z6uhn064vsth0mex8w50g84r66fg8yf7n6c29v8sfj69w0
+  - &lajp1 age1x23spzhzzlcrwer5s0zytzp2gqzwkwy0y47hzf4kpwdehggkr4tsqcj52q
+  - &lajp2 age1sfg2q77c39t4r9c84lpznv9kcqz6muhcffrgchn9zevcm0e89sksphe03p
+  - &yggiHost age1x4rpnhxrkwcsx0nu9ne7klggjpthaqma4xnan8kstcuuyvczz3qszfa2hf
+creation_rules:
+  - path_regex: "vms/yggi/[^/]+$"
+    key_groups:
+      age:
+        - *yggiHost
+        - *else
+        - *lajp1
+        - *lajp2
