@@ -8,6 +8,8 @@ keys:
   - &joonas age16ylkwjrnkwzxpj52x5xsrsqkzkk3le2tkww9fyhz08w9gn508vqq6e9pyj
   - &joonas1 age1xjyhwevqejxywc7a0ryeercu2c3j5vhv9skajrerst6vh6k894tq83etme
   - &joonas2 age1cvf3elykct77hmdcf4rrchretrdrjuxq9tpj0ht2v2tuft7naq2sq5clrd
+  - &yggiaarol age1hwtwf54sy0ez5qxxgeysesgjnhwq7skg4d7hw2xxgzu0fghs6a2srz6emk
+  - &aarol age1k0reheyp8hhhr5vgn8jn8r8g4gltnftflu26rekcpkcukltnx3aqmz9rze
 creation_rules:
   - path_regex: "vms/yggi/[^/]+$"
     key_groups:
@@ -19,3 +21,5 @@ creation_rules:
         - *joonas
         - *joonas1
         - *joonas2
+        - *yggiaarol
+        - *aarol
