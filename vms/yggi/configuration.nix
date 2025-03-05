@@ -35,8 +35,8 @@
     };
   };
 
-  # IPv6 address:           200:5852:ac0a:5380:8369:b3c4:e93f:7cf7
-  # Public key:             d3d6a9fad63fbe4b261d8b60418400552a19ecb116c1f89503ca90dd8308ca1e
+  # IPv6 address:           200:531b:e48d:d90c:1912:6176:1344:4e9c
+  # Public key:             d6720db91379f376cf44f65dd8b18fe830a667a89f60504063f1a64f25b5c448
   sops.secrets."yggi/yggdrasil/PrivateKey".sopsFile = ./secrets.yaml;
   sops.templates."yggdrasil/keys.json".content = builtins.toJSON {
     PrivateKey = config.sops.placeholder."yggi/yggdrasil/PrivateKey";

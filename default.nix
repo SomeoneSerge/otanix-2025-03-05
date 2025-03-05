@@ -75,7 +75,7 @@ let
                   # microvm.hypervisor = "cloud-hypervisor";
                   microvm.interfaces = [
                     {
-                      id = "uvm-${value.name}${hex.digit n}";
+                      id = "uvm-${lib.substring 0 4 value.name}${hex.digit n}";
                       type = "user";
                       mac = "32:0f:da:96:a1:0${hex.digit n}"; # FIXME: support >16 hosts
                     }
