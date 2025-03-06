@@ -136,6 +136,7 @@ in
       root = ./.;
       fileset = lib.fileset.unions [
         ./README.md
+        ./qr.png
       ];
     };
     nativeBuildInputs = [
